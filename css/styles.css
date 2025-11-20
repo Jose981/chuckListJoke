@@ -1,6 +1,18 @@
+:root {
+  --color: #fff;
+  --colorBackgroundGlobal: #836853;
+  --colorBackground: #B97B4F;
+  --colorbackgroundBoton: #0056b3;
+  --colorBackgroundChiste: #F6E2CF;
+  --colorRojo: #F66C5E;
+
+  --fuente: "Love Ya Like A Sister", cursive;
+}
+
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: var(--colorBackgroundGlobal);
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,22 +22,79 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: var(--color);
 }
 
 button {
   margin-top: 10px;
   padding: 8px 16px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--colorBackground);
+  color: var(--color);
   border: none;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--colorbackgroundBoton);
+  transition: all .2s linear;
+  transform: scale(1.1);
 }
 
+.contenedor-botones {
+  display: flex;
+  gap: 20px;
+}
 
+.header-chiste {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
+.divChiste {
+  background-color: var(--colorBackgroundChiste);
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px;
+  border-radius: 45px;
+}
+
+img {
+  width: 200px;
+  border-radius: 70px;
+}
+
+.divChiste button:hover {
+  background-color: var(--colorRojo);
+  transition: all .2s linear;
+  transform: scale(1.1);
+}
+
+#borrarTodos:hover {
+  background-color: var(--colorRojo);
+  transition: all .2s linear;
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 40px;
+  font-family: var(--fuente);
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+p,
+button {
+  font-family: var(--fuente);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
